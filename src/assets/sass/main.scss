@@ -1,0 +1,270 @@
+@import "./variables.scss";
+@import "bootstrap-grid";
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+  margin-top: 100px;
+}
+.primary {
+  color: $primary;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  &.container-small {
+    max-width: 760px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $secondary;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 100;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 24px;
+}
+h5 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 1.15rem;
+}
+
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.text-justify {
+  text-align: justify;
+}
+
+@media (min-width: 768px) {
+  .text-sm-left {
+    text-align: left;
+  }
+  .text-sm-right {
+    text-align: right;
+  }
+  .text-sm-center {
+    text-align: center;
+  }
+  .text-sm-justify {
+    text-align: justify;
+  }
+}
+@media (min-width: 992px) {
+  .text-md-left {
+    text-align: left;
+  }
+  .text-md-right {
+    text-align: right;
+  }
+  .text-md-center {
+    text-align: center;
+  }
+  .text-md-justify {
+    text-align: justify;
+  }
+}
+@media (min-width: 1200px) {
+  .text-lg-left {
+    text-align: left;
+  }
+  .text-lg-right {
+    text-align: right;
+  }
+  .text-lg-center {
+    text-align: center;
+  }
+  .text-lg-justify {
+    text-align: justify;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 1rem 2rem;
+  background-color: $primary;
+  color: $white;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid #fff;
+    margin: auto;
+    transition: all .15s ease-in;
+  }
+  &:hover {
+    &::before {
+      top: 5px;
+      bottom: 5px;
+      left: 5px;
+      right: 5px;
+    }
+  }
+
+  &.btn-light {
+    background-color: #fff;
+    color: $primary;
+  }
+  &.btn-dark {
+    background-color: $primary;
+    color: #fff;
+  }
+
+  &.btn-large {
+    font-size: 1.5rem;
+  }
+}
+
+blockquote {
+  font-weight: 600;
+  font-style: italic;
+  position: relative;
+
+  &::before {
+    content: '"';
+    font-size: 5rem;
+    position: absolute;
+    line-height: 1;
+    left: -3rem;
+    top: -0.25rem;
+  }
+}
+
+.headline {
+  margin-bottom: 5rem;
+  margin-top: 8rem;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  margin-left: 10rem;
+  #about & {
+    margin-top: 0;
+  }
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 5px;
+    background-color: $primary;
+    position: absolute;
+    left: 0;
+    z-index: -2;
+  }
+  &::after {
+    content: "";
+    width: 100%;
+    height: 20px;
+    background-image: linear-gradient(to right, $primary 20px, $white 20px);
+    position: absolute;
+    display: block;
+    margin-left: -4rem;
+    z-index: -1;
+  }
+  &.right {
+    justify-content: flex-end;
+    text-align: right;
+    margin-right: 10rem;
+    &::after {
+      background-image: linear-gradient(to left, $primary 20px, $white 20px);
+      margin-left: 4rem;
+    }
+  }
+}
+
+.outlined {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: calc(100% - 30px);
+    height: calc(100% - 30px);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border: 2px solid $white;
+    transition: transform 0.15s ease-in;
+    z-index: 50;
+  }
+  img {
+    transform: scale(1);
+    transition: transform 2.5s ease-out;
+    will-change: transform;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+  }
+  &.hover:hover,
+  &.hover.hovered {
+    &::before {
+      transform: translate(-5px, -5px);
+    }
+    &::after {
+      transform: translate(5px, 5px);
+    }
+    img {
+      //   transform: scale(1.1) rotate(1deg);
+    }
+  }
+}
