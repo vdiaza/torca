@@ -1,7 +1,7 @@
 <template>
   <section id="contact">
     <div class="container">
-    <div class="headline">Contáctanos</div>
+    <div class="headline"><span data-aos="fade-right">Contáctanos</span></div>
       <div class="row">
         <div class="col-lg-6">
           <div class="content" data-aos="fade-in">

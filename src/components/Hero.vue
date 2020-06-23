@@ -3,7 +3,7 @@
     <div class="container">
       <div class="hero-large-block" data-aos="fade-left" data-aos-delay="800" data-aos-duration="2000"></div>
       <div class="col-md-6">
-        <div class="hero-content">
+        <div class="hero-content" data-aos="fade-left" data-aos-delay="1200" data-aos-duration="2000">
           <h1>Obras Civiles, Montajes Y Restauraciones</h1>
           <h4>Expertos en Construcción</h4>
         </div>

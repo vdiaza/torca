@@ -1,7 +1,9 @@
 <template>
   <section id="gallery">
     <div class="container">
-      <div class="headline right">Galería</div>
+      <div class="headline right">
+        <span data-aos="fade-left">Galería</span>
+      </div>
       <div class="gallery-slider" data-aos="fade-up">
         <VueSlickCarousel ref="carousel" v-bind="settings">
           <div class="slide outlined hover" v-for="(image, key) in images" :key="key">

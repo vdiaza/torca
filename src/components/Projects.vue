@@ -1,7 +1,8 @@
 <template>
   <section id="projects">
     <div class="container">
-      <div class="headline">Nuestros Proyectos</div>
+      <div class="headline">
+        <span data-aos="fade-right">Nuestros Proyectos</span></div>
       <div
         class="row project"
         :class="{'justify-content-end': index%2==0}"
@@ -97,6 +98,9 @@ export default {
       height: 300px;
       width: 100%;
       background-color: #000;
+    }
+    .project-title{
+      margin-bottom: .5rem;
     }
     .project-location {
       color: $gray-light;

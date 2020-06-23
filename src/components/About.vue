@@ -1,7 +1,9 @@
 <template>
   <section id="about">
     <div class="container">
-    <div class="headline right">Sobre Nosotros</div>
+    <div class="headline right">
+      <span data-aos="fade-left">Sobre Nosotros</span>
+      </div>
       <div class="row align-items-center">
         <div class="col-lg-6">
           <div class="content" data-aos="fade-up">

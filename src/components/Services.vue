@@ -1,7 +1,9 @@
 <template>
   <section id="services">
     <div class="container">
-      <div class="headline right">Servicios</div>
+      <div class="headline right">
+        <span data-aos="fade-left">Servicios</span>
+      </div>
       <div
         class="row"
         v-for="(service, index) in services"
