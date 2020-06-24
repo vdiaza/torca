@@ -4,9 +4,14 @@
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
-  overflow-x: hidden;
   margin-top: 100px;
 }
+
+#app {
+  position: relative;
+  overflow-x: hidden;
+}
+
 .primary {
   color: $primary;
 }
@@ -147,7 +152,7 @@ img {
     background: rgba(0, 0, 0, 0);
     border: 1px solid #fff;
     margin: auto;
-    transition: all .15s ease-in;
+    transition: all 0.15s ease-in;
   }
   &:hover {
     &::before {
