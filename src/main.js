@@ -8,6 +8,10 @@ import 'aos/dist/aos.css'
 // import VueEasyLightbox from 'vue-easy-lightbox'
 
 export default function (Vue, { router, head, isClient, isServer }) {
+  head.link.push({
+    rel: 'stylesheet',
+    href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&display=swap'
+  })
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
   Vue.use(VueLazyLoad)
