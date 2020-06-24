@@ -17,7 +17,7 @@ export default function (Vue, { router, head, isClient, isServer }) {
   Vue.use(VueLazyLoad)
   if(isClient){
     AOS.init({
-      offset: 300,
+      offset: 100,
       duration: 600,
       once: true,
     })
