@@ -13,20 +13,19 @@
           v-for="(image, index) in images"
           :key="index"
           @click="showImg(index)"
-       
         >
-          <g-image :src="image.href"    data-aos="fade-up" />
+          <g-image :src="image.href" data-aos="fade-up" />
         </div>
       </div>
-      <vue-easy-lightbox :visible="visible" :imgs="imgs" :index="index" @hide="handleHide"></vue-easy-lightbox>
+      <ClientOnly>
+        <vue-easy-lightbox :visible="visible" :imgs="imgs" :index="index" @hide="handleHide"></vue-easy-lightbox>
+      </ClientOnly>
     </div>
   </layout>
 </template>
 
 <script>
-import VueEasyLightbox from 'vue-easy-lightbox'
 export default {
-  components: {  'vue-easy-lightbox' : VueEasyLightbox },
   props: ["title", "images"],
   data() {
     return {
@@ -35,11 +34,11 @@ export default {
     };
   },
   computed: {
-      imgs(){
-          return this.images.map(img => {
-              return img.href
-          })
-      }
+    imgs() {
+      return this.images.map(img => {
+        return img.href;
+      });
+    }
   },
   methods: {
     getImageUrl(img) {

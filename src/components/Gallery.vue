@@ -5,23 +5,23 @@
         <span data-aos="fade-left">Galería</span>
       </div>
       <div class="gallery-slider" data-aos="fade-up">
-        <VueSlickCarousel ref="carousel" v-bind="settings">
-          <div class="slide outlined hover" v-for="(image, key) in images" :key="key">
-            <img :src="image.pathLong" />
-          </div>
-        </VueSlickCarousel>
+        <ClientOnly>
+          <VueSlickCarousel ref="carousel" v-bind="settings">
+            <div class="slide outlined hover" v-for="(image, key) in images" :key="key">
+              <img :src="image.pathLong" />
+            </div>
+          </VueSlickCarousel>
+        </ClientOnly>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import VueSlickCarousel from "vue-slick-carousel";
 import "vue-slick-carousel/dist/vue-slick-carousel.css";
 // optional style for arrows & dots
 import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
 export default {
-  components: { VueSlickCarousel },
   data() {
     return {
       images: [],
